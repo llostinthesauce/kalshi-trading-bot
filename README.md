@@ -1,13 +1,13 @@
-# Kalshi AI Trading Bot 🚀
+# Kalshi Trading Bot 🚀
 
-A high-conviction, automated trading system for Kalshi prediction markets, leveraging **Anthropic Claude 3.5 Sonnet / xAI Grok** for real-time market analysis and risk-adjusted execution.
+A high-conviction, automated trading system for Kalshi prediction markets.
 
 ## 🛠 Project Scope
 The project has been refactored for **reliability and transparency**. It moves away from over-engineered multi-agent systems to a focused, single-loop execution engine that prioritizes statistical edge and capital preservation.
 
 ### Core Capabilities:
 *   **Real-Time Analysis:** Automated web-research and probability estimation via Anthropic/xAI (for BTC volatility) and deterministic NOAA API targeting (for weather markets).
-*   **Two-Pronged Execution:** Run the statistical AI analysis bot (`main.py`) alongside the deterministic NOAA matching bot (`weather_main.py`).
+*   **Two-Pronged Execution:** Run the statistical analysis code (`main.py`) alongside the deterministic NOAA matching code (`weather_main.py`).
 *   **Modular Architecture:** Seamlessly toggle between **Paper Trading** (virtual $1,000 balance) and **Live Trading** via `.env`.
 *   **Capital Guardrails:** Automated exposure limits and risk caps (default $1 per trade) prevent portfolio over-extension.
 *   **Live Monitoring:** A terminal-based output providing real-time PnL tracking, reasoning, and automated position scaling.
@@ -44,28 +44,11 @@ kalshi-ai-trading-bot/
 
 ---
 
-## 🚀 Planned Features (Roadmap)
-
-### Phase 1: Stability (Current)
-- [x] Bulletproof RSA authentication.
-- [x] Real-time Unrealized PnL tracking.
-- [x] Capital exposure limits.
-
-### Phase 2: Venue Expansion
-- [ ] **Cross-Venue Arbitrage:** Implementing the blueprint to capture price gaps between Kalshi and Polymarket.
-- [ ] **Polymarket Client:** Direct integration with Polygon CLOB for atomic arb execution.
-
-### Phase 3: Advanced Execution
-- [ ] **Dynamic Exits:** Automated "Take Profit" and "Stop Loss" orders based on Grok's changing confidence.
-- [ ] **Sentiment Aggregator:** Integrating direct RSS and X (Twitter) feeds into the Grok research prompt.
-
----
-
 ## 🚦 How to Run
 
 1.  **Configure:**
     *   Initialize `.env`: `cp env.template .env`
-    *   Add your Kalshi, Anthropic, or xAI keys to `.env`. Turn `LIVE_TRADING_ENABLED=true` to switch off paper logging mode.
+    *   Add your Kalshi keys to `.env`. Turn `LIVE_TRADING_ENABLED=true` to switch off paper logging mode.
 2.  **Start BTC Bot:** `python3 main.py`
 3.  **Start Weather Bot (Open in a second terminal tab):** `python3 weather_main.py`
 
