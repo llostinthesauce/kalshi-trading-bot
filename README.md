@@ -53,4 +53,3 @@ kalshi-ai-trading-bot/
 3.  **Start Weather Bot (Open in a second terminal tab):** `python3 weather_main.py`
 
 *Note: The bots run in background mode and maintain state independently in `trading_system.db`.*
-
